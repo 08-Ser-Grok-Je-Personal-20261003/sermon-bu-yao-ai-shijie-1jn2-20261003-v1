@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>不要爱世界 · 约翰一书 2:15–17</title>
+<meta name="description" content="欧陆改革宗主日讲章：不要爱世界。证经约翰一书2章15至17节。">
+<style>
+  :root {
+    --ink: #0e1a2b;
+    --ink-soft: #24344a;
+    --parchment: #f4efe4;
+    --parchment-2: #fbf7ef;
+    --card: #fffaf2;
+    --gold: #a6843e;
+    --gold-2: #e6d3a1;
+    --crimson: #8c2f39;
+    --crimson-bg: #f8e8e6;
+    --grace: #1b5e45;
+    --grace-bg: #e5f2eb;
+    --line: rgba(166, 132, 62, .38);
+    --header-h: 4.35rem;
+    --sans: "Noto Sans SC", "PingFang SC", "Source Han Sans SC", "Microsoft YaHei", "Heiti SC", sans-serif;
+    --serif: "Noto Serif SC", "Songti SC", "Source Han Serif SC", "STSong", "SimSun", "PMingLiU", serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background:
+      radial-gradient(1200px 500px at 10% -10%, rgba(230, 211, 161, .35), transparent 50%),
+      var(--parchment);
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    line-height: 1.85;
+    overflow-x: hidden;
+  }
+  img, svg { max-width: 100%; height: auto; }
+  a { color: var(--grace); }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .skip {
+    position: absolute; left: 1rem; top: -4rem; background: var(--gold-2); color: var(--ink);
+    padding: .4rem .8rem; z-index: 80;
+  }
+  .skip:focus { top: .5rem; }
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+    min-height: var(--header-h);
+    padding: .55rem clamp(.8rem, 2vw, 1.4rem);
+    color: #f6f1e6;
+    background: #0e1a2b;
+    background: rgba(14, 26, 43, .9);
+    backdrop-filter: saturate(1.15) blur(14px);
+    -webkit-backdrop-filter: saturate(1.15) blur(14px);
+    border-bottom: 1px solid rgba(230, 211, 161, .28);
+  }
+  .brand { min-width: 0; }
+  .brand .kicker {
+    margin: 0; font-family: var(--sans); font-size: .72rem; letter-spacing: .14em;
+    color: var(--gold-2); text-transform: none;
+  }
+  .brand h1 {
+    margin: 0; font-size: clamp(1.15rem, 2.5vw, 1.55rem); font-weight: 650; letter-spacing: .06em; line-height: 1.25;
+  }
+  .brand .sub { margin: .1rem 0 0; font-family: var(--sans); font-size: .78rem; color: #d9e2ee; line-height: 1.4; }
+  .header-actions { display: flex; gap: .45rem; flex-shrink: 0; }
+  .btn {
+    font-family: var(--sans); font-size: .85rem; line-height: 1.2;
+    color: var(--ink); background: var(--gold-2); border: 0; border-radius: 999px;
+    padding: .55rem .9rem; cursor: pointer;
+  }
+  .btn.ghost { color: var(--gold-2); background: transparent; border: 1px solid rgba(230, 211, 161, .5); }
+  .gold-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
+    background-size: 200% 100%;
+    animation: sheen 9s linear infinite;
+  }
+  @keyframes sheen { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+  .layout { display: grid; grid-template-columns: 18.5rem minmax(0, 1fr); align-items: start; }
+  #toc {
+    position: sticky; top: var(--header-h);
+    max-height: calc(100vh - var(--header-h));
+    overflow: auto;
+    padding: 1rem .9rem 2rem;
+    background: rgba(251, 247, 239, .78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-right: 1px solid var(--line);
+  }
+  #toc h2 { font-family: var(--sans); font-size: .78rem; letter-spacing: .16em; margin: .2rem 0 .6rem; color: var(--gold); }
+  #toc ol { list-style: none; margin: 0; padding: 0; }
+  #toc li { margin: 0; }
+  #toc a {
+    display: block; text-decoration: none; color: var(--ink-soft);
+    font-family: var(--sans); font-size: .9rem; line-height: 1.45;
+    padding: .38rem .45rem; border-radius: .45rem;
+  }
+  #toc a:hover { background: rgba(166, 132, 62, .12); color: var(--ink); }
+  .scrim { display: none; }
+  main { min-width: 0; padding: clamp(.8rem, 2vw, 1.6rem) clamp(.7rem, 2.2vw, 2rem) 3.5rem; }
+  section { scroll-margin-top: calc(var(--header-h) + .6rem); margin: 0 0 1rem; }
+  .reveal { animation: rise .7s ease both; }
+  .reveal:nth-child(2) { animation-delay: .05s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .hero {
+    padding: clamp(1.2rem, 3vw, 2.4rem);
+    background: var(--ink);
+    color: #f6f1e6;
+    border-radius: 1.1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; right: -3rem; top: -3rem; width: 14rem; height: 14rem;
+    border: 1px solid rgba(230, 211, 161, .25); border-radius: 50%;
+  }
+  .hero h2 { margin: .2rem 0 .4rem; font-size: clamp(1.8rem, 4vw, 2.7rem); letter-spacing: .12em; line-height: 1.2; }
+  .hero p { max-width: 44rem; color: #e4dcc8; margin: .35rem 0; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .8rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 1.05rem;
+    padding: clamp(1rem, 2vw, 1.7rem);
+    box-shadow: 0 12px 36px rgba(14, 26, 43, .04);
+  }
+  .card + .card { margin-top: .9rem; }
+  h2.sec, h3 { font-weight: 650; line-height: 1.35; letter-spacing: .04em; }
+  h2.sec { font-size: clamp(1.35rem, 2.4vw, 1.75rem); margin: 0 0 .7rem; display: flex; align-items: center; gap: .5rem; }
+  h3 { font-size: 1.18rem; margin: 1.15rem 0 .4rem; }
+  h4 { margin: .9rem 0 .3rem; font-size: 1.02rem; }
+  .prose p, .prose li { max-width: 46rem; }
+  .lede { font-size: 1.12rem; }
+  .ico { width: 1.15em; height: 1.15em; vertical-align: -0.15em; flex: 0 0 auto; }
+  .scripture {
+    margin: .8rem 0; padding: .9rem 1rem .9rem 1rem;
+    border-left: 3px solid var(--gold);
+    background: #f7f1e4;
+    max-width: 46rem;
+  }
+  .scripture p { margin: .25rem 0; }
+  .ref { font-family: var(--sans); font-size: .82rem; color: #6d5a32; letter-spacing: .04em; }
+  .chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0 0; }
+  .chip {
+    font-family: var(--sans); font-size: .82rem; line-height: 1.3;
+    padding: .28rem .55rem; border-radius: 999px; border: 1px solid transparent;
+  }
+  .c-world { background: #e7eef8; color: #1d3e6e; border-color: #c5d4ea; }
+  .c-love { background: var(--crimson-bg); color: var(--crimson); border-color: #e3c1c2; }
+  .c-why { background: #f8f0dc; color: #6d5314; border-color: #e4d2a4; }
+  .c-guilt { background: var(--crimson-bg); color: var(--crimson); }
+  .c-grace { background: var(--grace-bg); color: var(--grace); }
+  .c-thanks { background: #f4ead2; color: #6a4e12; }
+  .hl { background: linear-gradient(#fff3, #f3e2b5 35%, #f3e2b5 80%, #fff3); padding: 0 .15em; }
+  .u-gold { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: .18em; text-decoration-thickness: 2px; }
+  .mark-warn { background: var(--crimson-bg); color: var(--crimson); padding: 0 .2em; border-radius: .15em; }
+  .mark-grace { background: var(--grace-bg); color: var(--grace); padding: 0 .2em; border-radius: .15em; }
+  .call {
+    max-width: 46rem; margin: .9rem 0; padding: .85rem 1rem; border-radius: .7rem;
+    background: #f6f3ea; border: 1px dashed var(--line);
+  }
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: .8rem; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: .75rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  .table-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  th, td { border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; padding: .55rem .5rem; }
+  th { font-family: var(--sans); font-size: .82rem; letter-spacing: .06em; color: #6d5a32; font-weight: 600; }
+  figcaption, .note { font-family: var(--sans); font-size: .82rem; color: #5c5144; line-height: 1.55; }
+  figure { margin: .8rem 0; }
+  .map-wrap, .diagram {
+    background: #f7f3ea; border-radius: .8rem; border: 1px solid var(--line); padding: .6rem;
+  }
+  .q { border-top: 1px solid var(--line); padding-top: .8rem; margin-top: .8rem; }
+  .q .label { font-family: var(--sans); font-size: .75rem; letter-spacing: .12em; color: var(--gold); }
+  .memory { background: var(--ink); color: #f6f1e6; border-radius: 1.05rem; padding: clamp(1rem, 2vw, 1.6rem); }
+  .memory ol { margin: .4rem 0; padding-left: 1.2rem; }
+  .memory li { margin: .45rem 0; max-width: 46rem; }
+  .gospel-line { color: var(--gold-2); font-size: 1.12rem; }
+  .pass-stage { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; align-items: center; }
+  .stage-card { text-align: center; padding: .4rem; }
+  .ring {
+    fill: none; stroke: var(--crimson); stroke-width: 4;
+    transform-origin: 70px 70px;
+    animation: pass 5.2s ease-in-out infinite;
+  }
+  .abide-mark { fill: var(--grace); }
+  @keyframes pass {
+    0%, 100% { opacity: .9; stroke-dasharray: 8 0; }
+    45% { opacity: .12; stroke-dasharray: 2 10; }
+    70% { opacity: .35; }
+  }
+  footer.colophon { font-family: var(--sans); font-size: .8rem; color: #5e564c; max-width: 46rem; }
+  body.toc-collapsed .layout { grid-template-columns: minmax(0, 1fr); }
+  body.toc-collapsed #toc { display: none; }
+  @media (max-width: 960px) {
+    .layout { grid-template-columns: minmax(0, 1fr); }
+    body.toc-collapsed #toc { display: block; }
+    #toc {
+      position: fixed; z-index: 40; top: var(--header-h); right: 0; bottom: 0;
+      width: min(22rem, 88vw); max-height: none;
+      transform: translateX(104%);
+      transition: transform .28s ease;
+      border-right: 0; border-left: 1px solid var(--line);
+      box-shadow: -12px 0 40px rgba(14, 26, 43, .18);
+      background: #fbf7ef;
+    }
+    body.toc-open #toc { transform: translateX(0); }
+    body.toc-open .scrim { display: block; position: fixed; inset: 0; background: rgba(14, 26, 43, .46); z-index: 35; }
+    .pass-stage { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 400px) {
+    .header-actions .ghost { display: none; }
+    .brand .sub { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation: none !important; transition: none !important; scroll-behavior: auto !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+  }
+  @media print {
+    .site-header, #toc, .scrim, .header-actions, .gold-line { display: none !important; }
+    .layout { display: block; }
+    body { background: white; }
+    .hero, .memory { color: black; background: white; border: 1px solid #ccc; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+<header class="site-header">
+  <div class="brand">
+    <p class="kicker">主日证道 · 欧陆改革宗</p>
+    <h1>不要爱世界</h1>
+    <p class="sub">证经：约翰一书 2:15–17 · 备于二〇二六年十月三日（台北）</p>
+  </div>
+  <div class="header-actions">
+    <button type="button" class="btn" id="toc-toggle" aria-expanded="true" aria-controls="toc">隐藏目录</button>
+  </div>
+</header>
+<div class="gold-line" aria-hidden="true"></div>
+<div class="scrim" id="scrim" hidden></div>
+<div class="layout">
+<nav id="toc" aria-label="目录">
+  <h2>目录</h2>
+  <ol>
+    <li><a href="#liturgy">一、主日礼仪</a></li>
+    <li><a href="#reading">二、读经与证经</a></li>
+    <li><a href="#setting">三、历史处境</a></li>
+    <li><a href="#essence">四、经文要旨</a></li>
+    <li><a href="#canon">五、在全本圣经中</a></li>
+    <li><a href="#covenant">六、圣约中的世界</a></li>
+    <li><a href="#kosmos">七、两个「世界」</a></li>
+    <li><a href="#reformed">八、罪、恩典、感恩</a></li>
+    <li><a href="#heads">九、三要点</a></li>
+    <li><a href="#exposition">十、逐句讲解</a></li>
+    <li><a href="#parallels">十一、经文互参</a></li>
+    <li><a href="#questions">十二、讨论与解析</a></li>
+    <li><a href="#expansions">十三、相关延伸</a></li>
+    <li><a href="#memorize">十四、讲员速记</a></li>
+    <li><a href="#close">十五、祝祷</a></li>
+  </ol>
+</nav>
+<main id="main">
+
+<section id="liturgy" class="reveal">
+  <article class="hero">
+    <p class="ref">晨间主日 · 一篇讲章，不是三篇论文</p>
+    <h2>不要爱世界</h2>
+    <p>会众若已属于信实的救主，就不必再把心交给正在过去的秩序。约翰写信，是要人与父和子相交，喜乐充足，不犯罪，并且知道自己有永生。今日的禁令，就站在这恩典里面。</p>
+    <div class="chips" aria-label="讲章三点">
+      <span class="chip c-world">什么是世界</span>
+      <span class="chip c-love">什么是爱世界</span>
+      <span class="chip c-why">为什么不要爱世界</span>
+    </div>
+  </article>
+  <article class="card prose" style="margin-top:.9rem">
+    <h2 class="sec"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h10v2H4v-2z"/></svg>主日礼仪中的位置</h2>
+    <p>下列次序供晨间敬拜穿插。诗歌只标堂会所用篇次，本页不录歌词，以免把诗本误写成经文。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>次序</th><th>内容</th><th>与证道的关系</th></tr></thead>
+        <tbody>
+          <tr><td>颂赞</td><td>圣诗第14首 1–3节</td><td>先把口张开向神，不先向世界要安慰。</td></tr>
+          <tr><td>认罪</td><td>静默，并承认爱了不该爱的</td><td>对应下文的「罪」：爱世界是拜偶像。</td></tr>
+          <tr><td>赦罪之宣</td><td>约壹2:1–2</td><td>中保与挽回祭先于劝勉。恩典在命令之前。</td></tr>
+          <tr><td>仰望</td><td>韵诗27篇 4–6节</td><td>诗篇只有「一件事」：住在耶和华殿中，瞻仰他的荣美。这一件事，正是爱世界的反面。</td></tr>
+          <tr><td>读经</td><td>约壹2:1–17</td><td>听完整段，再专注15–17节。</td></tr>
+          <tr><td>证道</td><td>不要爱世界</td><td>三点收束于同一位基督。</td></tr>
+          <tr><td>回应</td><td>圣诗第14首 8–10节</td><td>听道之后把同一首诗唱完，表示劝勉不是中断赞美。</td></tr>
+          <tr><td>道路</td><td>韵诗第1篇</td><td>一条路如树常存，一条路如糠秕过去。正是2:17的两种结局。</td></tr>
+          <tr><td>差遣前</td><td>圣诗第9首</td><td>受造界仍在脚下，心却已归父。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">海德堡问答第一问把一生的安慰放在「我属于救主」，不放在今生的骄傲里。礼仪这样排，是叫会众先站在这安慰上，再听禁令。</p>
+  </article>
+</section>
+
+<section id="reading" class="reveal">
+  <article class="card prose">
+    <h2 class="sec"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 0-3 3V4zm0 16a3 3 0 0 1 3-3h11"/></svg>读经与证经</h2>
+    <p class="ref">读经：约翰一书 2:1–17　·　证经：2:15–17</p>
+    <p>用词依一九一九年官话和合本（公有领域）。引文从短，标点从今通行本，便于诵读，不改字句。</p>
+    <div class="scripture">
+      <p>我小子们哪，我将这些话写给你们，是要叫你们不犯罪。若有人犯罪，在父那里我们有一位中保，就是那义者耶稣基督。他为我们的罪作了挽回祭，不是单为我们的罪，也是为普天下人的罪。</p>
+      <p class="ref">约壹2:1–2</p>
+    </div>
+    <p>第3至14节接着说：认识他的人遵守诫命；爱弟兄的住在光中；小子、父老、少年都已蒙赦免、认识那位从起初原有的，并且胜了那恶者，神的道常存在心里。然后才是今日的证经。</p>
+    <div class="scripture">
+      <p>不要爱世界和世界上的事。人若爱世界，爱父的心就不在他里面了。</p>
+      <p>因为凡世界上的事，就像肉体的情欲、眼目的情欲，并今生的骄傲，都不是从父来的，乃是从世界来的。</p>
+      <p>这世界和其上的情欲都要过去，惟独遵行神旨意的，是永远常存。</p>
+      <p class="ref">约壹2:15–17</p>
+    </div>
+    <p>读的时候请先记住三句话，后面都要回到这里：<span class="hl">爱世界，爱父的心就不在里面</span>；<span class="mark-warn">这些事不是从父来的</span>；<span class="mark-grace">遵行神旨意的永远常存</span>。</p>
+  </article>
+</section>
+
+<section id="setting" class="reveal">
+  <article class="card">
+    <div class="prose">
+      <h2 class="sec">写信的人、受信的人、那个时候</h2>
+      <p>改革宗教会传统认定，这封信出自使徒约翰。近代学者对作者是谁仍有讨论。讲台上不必假装讨论已经结束。我们照教会历来所领受的说：作者是使徒约翰。年代则当视为约数，大约在主后八十五年至九十五年之间，也就是第一世纪末，不是一个可以写到墓碑上的确定年份。</p>
+      <p>受信的是小亚细亚一带的约翰群体。教会史通常以<span class="u-gold">以弗所</span>为这群体的中心。这是方位上的判断，不是某件新出土文物替我们盖了章。他们是已经听见「从起初原有的生命之道」的教会，不是广场上第一次听道的路人。</p>
+    </div>
+    <figure>
+      <div class="map-wrap">
+        <svg viewBox="0 0 640 380" role="img" aria-labelledby="mapTitle mapDesc">
+          <title id="mapTitle">爱琴海与小亚细亚示意图</title>
+          <desc id="mapDesc">非实测地图。只标以弗所为传统中心，并略标西岸数城作方位。</desc>
+          <rect width="640" height="380" fill="#e7eef6"/>
+          <path d="M250 24c40 18 70 28 120 24 48-4 90 10 140 8 40 30 70 78 78 130 8 60-10 110-40 140-38 20-90 28-130 18-20 28-70 40-110 28-10-30-4-70 8-100-30-10-70-40-78-80-10-48 8-90 12-168z" fill="#efe4cf" stroke="#a6843e" stroke-width="2"/>
+          <path d="M40 200c40-20 70-10 90 16 18 24 10 48-8 60" fill="none" stroke="#7f97b0" stroke-width="2"/>
+          <text x="78" y="168" fill="#1d3e6e" font-size="22" font-family="Songti SC, Noto Serif SC, serif">爱琴海</text>
+          <text x="400" y="78" fill="#6d5314" font-size="22" font-family="Songti SC, Noto Serif SC, serif">小亚细亚</text>
+          <circle cx="268" cy="196" r="7" fill="#8c2f39"/>
+          <text x="282" y="190" fill="#8c2f39" font-size="20" font-family="Songti SC, Noto Serif SC, serif">以弗所</text>
+          <text x="282" y="214" fill="#8c2f39" font-size="14" font-family="sans-serif">传统中心</text>
+          <circle cx="286" cy="150" r="4" fill="#24344a"/>
+          <text x="296" y="154" fill="#24344a" font-size="15" font-family="Songti SC, Noto Serif SC, serif">士每拿</text>
+          <circle cx="318" cy="108" r="4" fill="#24344a"/>
+          <text x="328" y="112" fill="#24344a" font-size="15" font-family="Songti SC, Noto Serif SC, serif">别迦摩</text>
+          <text x="24" y="352" fill="#5c5144" font-size="14" font-family="sans-serif">示意图，非实测地图。海岸与城址只为会众辨认方位。</text>
+        </svg>
+      </div>
+      <figcaption>示意图，不是测绘地图。红点是以弗所：传统上视为这些教会的中心。其余城名只帮助会众看见「小亚细亚西岸」，并不表示启示录七教会就是这封信的全部收件人。</figcaption>
+    </figure>
+    <div class="prose">
+      <h3>教会里发生了什么</h3>
+      <p>信中明说，有人「从我们中间出去」（2:19）。他们出去，显明本来不属于这相交。与此同时，有一种说法在动摇教会：不认耶稣基督是成了肉身来的（4:2–3；参约贰7节）。另有一种生活在轻看罪：自称与神相交，却仍在黑暗里行；自称没有罪，便是自欺（1:6、8、10）；自称认识他，却不守诫命（2:4）。</p>
+      <p>所以这不是一座平静的教堂忽然收到一篇道德散文。教会被一种「过高」的灵性拉扯：高到不需要道成肉身，也高到可以把罪说淡。爱世界，是同一场危机的生活面貌。人若看不起肉身来的基督，就很容易把今生的欲望重新奉为向导。</p>
+      <h3>这段话为什么写在这里</h3>
+      <p>2:1–2先立下中保与挽回祭。2:3–6说认识他的人守诫命、照他所行的去行。2:7–11说真爱弟兄的人才在光中，恨弟兄的仍在黑暗里。2:12–14用牧者的口吻安慰：罪已因主名得赦，道常存在心里，少年人胜了那恶者。</p>
+      <p>然后才写「不要爱世界」。次序不能倒。胜了那恶者的人，仍可能把心交还给卧在那恶者手下的秩序（5:19）。禁令是对已经得胜之人的看守，不是对局外人的入门考。</p>
+      <p>再往后，2:18起才明说末时与敌基督。爱世界与随从敌基督的灵，是前后相连的两扇门：一扇关乎爱什么，一扇关乎认不认肉身来的基督。先堵住爱，再揭穿那灵，会众才不会把教义争论当成与生活无关的事。</p>
+      <h3>他为什么写这封信</h3>
+      <p>目的在信里是说清楚的，不必另找隐秘动机。1:3–4：把所看见、所听见的传开，为要叫读者与使徒相交，而他们乃是与父并他儿子耶稣基督相交的，并且叫喜乐充足。2:1：写这些话，是要叫他们不犯罪。5:13：写给信奉神儿子之名的人，要叫他们知道自己有永生。</p>
+      <p class="call">把这三句扣在今日经文上：不爱世界，是为了保守相交与喜乐，是为了不犯罪，也是为了叫真有永生的人能认出自己。禁令的尽头是认识，不是惊恐。</p>
+    </div>
+  </article>
+</section>
+
+<section id="essence" class="reveal">
+  <article class="card prose">
+    <h2 class="sec">经文要旨</h2>
+    <p class="lede">约翰对已经蒙赦免的儿女说：不可把爱交给「世界」——那与父相对、由三类欲望构成、正在过去的今世秩序。人若爱它，爱父的心就不在他里面。出于父的生命另有记号：遵行神的旨意，并且永远常存。</p>
+    <p>要旨可以收成会众听得懂的一句：<span class="hl">父与世界不能同时作心中的主；世界要过去，住在子里而遵行父旨意的人不过去。</span></p>
+  </article>
+</section>
+
+<section id="canon" class="reveal">
+  <article class="card prose">
+    <h2 class="sec">在全本圣经中的位置</h2>
+    <p>不要从一句禁令开始读圣经，也不要在这句禁令上结束。整本圣经有一条路，今日经文是这条路上的一块界石。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>阶段</th><th>神在作什么</th><th>与「世界」相关的一点</th></tr></thead>
+        <tbody>
+          <tr><td>创造</td><td>神看所造的为好</td><td>受造界本身不是敌人。后来禁止爱的，不是这「好」。</td></tr>
+          <tr><td>堕落</td><td>人听了蛇，不听神</td><td>创3:6：果子好作食物，悦人眼目，又能使人有智慧。欲望扭曲了，受造物被拿来对抗赐物的主。</td></tr>
+          <tr><td>亚伯拉罕</td><td>呼召离开本族本地</td><td>应许不是叫人恨土地，是叫人不再以旧的家乡为神。</td></tr>
+          <tr><td>西奈</td><td>立约，禁拜别神</td><td>申命记六章：以色列要尽心、尽性、尽力爱耶和华。爱是圣约的中心，不能分给偶像。</td></tr>
+          <tr><td>被掳</td><td>审判百姓随从列国</td><td>爱列国的神与样式，就是失去应许之地的道路。秩序可以很兴旺，仍在审判之下。</td></tr>
+          <tr><td>基督</td><td>真光成了肉身而来</td><td>世界藉他而造，世界却不认识他。光来到世间，人倒爱黑暗。</td></tr>
+          <tr><td>审判与过去</td><td>这世界的王被赶出，秩序正在过去</td><td>约壹2:8黑暗渐渐过去；2:17世界和其上的情欲都要过去。</td></tr>
+          <tr><td>来世</td><td>遵行神旨意的永远常存</td><td>常存的不是今生的骄傲，乃是在子里活出来的旨意。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>回路在此合上：神造的是好的；人把好的变成背叛的工具；圣约呼召人单爱耶和华；以色列失败了；子在肉身里来，亲自走过这世界，审判它，也救出身在其中的人；所以使徒现在能说，这秩序正在过去，而属于父的人常存。禁令不是厌世，是站在已经破晓的光里，不再回到黑暗。</p>
+  </article>
+</section>
+
+<section id="covenant" class="reveal">
+  <article class="card prose">
+    <h2 class="sec">圣约：不是恨恶受造界</h2>
+    <p>比利时信条第十四条按圣经承认：人原能合乎神的旨意，却听从魔鬼，本性败坏，与赐生命的神隔绝。约翰所说的「世界」，就是这败坏被组织成一个世代：价值观、欲望与夸口连成一种空气，叫人以为不必神也能活。</p>
+    <p>所以圣约里有两个家园，不是两种物质。一个是亚当里的旧世代：人要自己作主，「如神能知道善恶」。一个是子里的生命：罪得赦免，道存在心里，爱父，也爱弟兄。基督徒仍吃饭、工作、成家、走路看海。这些若以感谢领受，是创造主的礼物。提前4:4说，凡神所造的物都是好的，若感谢着领受，就没有一样可弃的。可弃的不是物，是那种不感谢、不顺服、只把物当成神的心。</p>
+    <p class="call">圣约回路：旧世代在亚当的叛逆里，卧在恶者手下；新生命在子里，由父的爱所生。不要爱世界，是约中儿女不可再认旧家为主，不是叫他们咒诅神亲手所造的树、饼与孩子。</p>
+    <div class="chips">
+      <span class="chip c-world">受造界：当感谢</span>
+      <span class="chip c-love">今世秩序：不可爱</span>
+      <span class="chip c-grace">子里的生命：当住</span>
+    </div>
+  </article>
+</section>
+
+<section id="kosmos" class="reveal">
+  <article class="card prose">
+    <h2 class="sec">约翰福音与约翰一书里的「世界」</h2>
+    <p>会众常在这里绊倒：既说神爱世人，又说不要爱世界。两个「世界」若不作区分，不是神自相矛盾，就是讲员把会众讲乱。</p>
+    <p>约翰福音一章十节已经把词的跨度显出来：他在世界之中；世界是藉着他造的；世界却不认识他。同一词，可以指所在之处，可以指受造全体，也可以指不认识他的人间。读的时候要看句子在说哪一层，不能见字就译成同一个意思。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th>约翰福音 3:16</th><th>约翰一书 2:15</th></tr></thead>
+        <tbody>
+          <tr><td>谁在爱</td><td>神爱</td><td>禁止门徒去爱</td></tr>
+          <tr><td>「世界」在此指</td><td>神差子所进入的人间，叫信的人不至灭亡</td><td>与父对立的今世秩序，及其情欲与骄傲</td></tr>
+          <tr><td>目的</td><td>拯救，得永生</td><td>警戒，免得爱父的心不在里面</td></tr>
+          <tr><td>与子的关系</td><td>独生子被赐下</td><td>人若爱那秩序，就是离开父与子的相交</td></tr>
+          <tr><td>结局</td><td>信的人不灭亡</td><td>那秩序和其上的情欲都要过去</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>两句合在一起，才是约翰的全意。父爱世人，所以差子来作挽回祭（约壹4:9–10与2:2同一件事）。父不爱叛逆的秩序，所以不许儿女与那秩序为友。门徒当爱父所爱的人——甚至爱弟兄到舍命的地步——却不可爱父所定罪的道路。</p>
+    <p>书信内部也是闭合的。2:8真光已经照耀，黑暗渐渐过去；2:15–17说明那「渐渐过去」的黑暗在欲望里怎样活动；2:18以后指出不认肉身来的基督之灵；5:19再判定全世界都卧在那恶者手下；5:21以「远避偶像」作收束。从「不要爱世界」走到「远避偶像」，中间没有换题目。</p>
+    <p>约翰福音十七章把生活的分寸说完：主不求父叫门徒离开世界，只求父保守他们脱离那恶者。仍在人间行走，心却不把那恶者的秩序当成家乡。这就是2:15在福音书里的回声。</p>
+  </article>
+</section>
+
+<section id="reformed" class="reveal">
+  <article class="card">
+    <div class="prose">
+      <h2 class="sec">罪、恩典、感恩</h2>
+      <p>欧陆改革宗读这段，不用三篇互不相干的讲章，而用一条牧养的路：先见罪，再见基督，然后才谈新的生活。生活是感恩，不是补考。</p>
+    </div>
+    <div class="grid-2">
+      <div>
+        <svg viewBox="0 0 400 640" role="img" aria-label="罪、恩典、感恩流程图">
+          <rect x="40" y="24" width="320" height="130" rx="18" fill="#f8e8e6" stroke="#8c2f39" stroke-width="2"/>
+          <text x="200" y="70" text-anchor="middle" fill="#8c2f39" font-size="28" font-family="Songti SC, Noto Serif SC, serif">罪</text>
+          <text x="200" y="108" text-anchor="middle" fill="#3a2a2a" font-size="16" font-family="Songti SC, Noto Serif SC, serif">爱世界就是拜偶像</text>
+          <path d="M200 154 v36" stroke="#a6843e" stroke-width="3" />
+          <rect x="40" y="190" width="320" height="150" rx="18" fill="#e5f2eb" stroke="#1b5e45" stroke-width="2"/>
+          <text x="200" y="240" text-anchor="middle" fill="#1b5e45" font-size="28" font-family="Songti SC, Noto Serif SC, serif">恩典</text>
+          <text x="200" y="278" text-anchor="middle" fill="#1a2e26" font-size="16" font-family="Songti SC, Noto Serif SC, serif">义者基督作了挽回祭</text>
+          <text x="200" y="306" text-anchor="middle" fill="#1a2e26" font-size="16" font-family="Songti SC, Noto Serif SC, serif">父的爱先临到儿女</text>
+          <path d="M200 340 v36" stroke="#a6843e" stroke-width="3"/>
+          <polygon points="200,384 192,368 208,368" fill="#a6843e"/>
+          <rect x="40" y="390" width="320" height="150" rx="18" fill="#f8f0dc" stroke="#a6843e" stroke-width="2"/>
+          <text x="200" y="444" text-anchor="middle" fill="#6d5314" font-size="28" font-family="Songti SC, Noto Serif SC, serif">感恩</text>
+          <text x="200" y="482" text-anchor="middle" fill="#2c2416" font-size="16" font-family="Songti SC, Noto Serif SC, serif">不爱世界，遵行神的旨意</text>
+          <text x="200" y="510" text-anchor="middle" fill="#2c2416" font-size="16" font-family="Songti SC, Noto Serif SC, serif">住在子里面，永远常存</text>
+          <path d="M360 465c28 0 32-200 8-400" fill="none" stroke="#a6843e" stroke-width="2" stroke-dasharray="5 6"/>
+          <text x="368" y="250" fill="#6d5314" font-size="14" font-family="sans-serif">回路</text>
+        </svg>
+        <p class="note">流程图：感恩走回光中，是因为恩典已经除去罪债，不是用行为把恩典赚回来。</p>
+      </div>
+      <div class="prose">
+        <h3><span class="chip c-guilt">罪</span></h3>
+        <p>爱世界，是圣约的破裂，是偶像崇拜。海德堡问答第九十四问教训人：第一条诫命要求人逃避一切偶像，唯独信靠、爱、敬畏真神，宁可舍下别的，也不违背他的旨意。第九十五问说明，偶像就是在真神之外，或与真神并列，另有所倚靠的对象。真神已在圣经里显明自己。</p>
+        <p>肉体的情欲、眼目的情欲、今生的骄傲，不必先铸成金牛犊，就已经是倚靠的对象。人把安全、快乐与分量放在它们身上，爱父的心就不在他里面。信的末了叫人远避偶像（5:21）。海德堡问答第九十四问引这节，不是偶然：书信的结尾与2:15是同一条诫命。</p>
+        <h3><span class="chip c-grace">恩典</span></h3>
+        <p>命令说出来之前，约翰已经说：若有人犯罪，在父那里有一位中保，就是那义者耶稣基督；他作了挽回祭（2:1–2）。比利时信条第二十一条称基督为我们唯一的大祭司，以他自己的补赎平息神的忿怒。会众不是靠「从此少爱一点世界」来平息忿怒。忿怒已在义者身上对付。</p>
+        <p>2:2说这挽回祭不是单为我们的罪，也是为普天下人的罪。牧养上要听准：基督不是一小群人的私家礼仪，仿佛别人不配被这祭所涵盖；他也不是一张许可，叫人继续爱世界仍自称为平安。下文立刻说，爱世界的人，爱父的心不在里面。出去的人，显明不属于这相交（2:19）。恩典足够赦免凡信靠他的罪人，也足够把他们从这世代里分别出来。</p>
+        <p>父的爱在先。4:10、4:19：不是我们爱神，乃是神爱我们，差他的儿子作挽回祭；我们爱，因为神先爱我们。「爱父的心」若用和合本的说法，是向着父的爱；这爱本身已是父先爱的回应。世界插进来，是要把这回应掐断。</p>
+        <h3><span class="chip c-thanks">感恩</span></h3>
+        <p>感恩不是多一份情绪，是遵行神的旨意，住在主里面，照主所行的去行（2:6、2:17）。小子们的罪已经因主名得赦（2:12），所以这顺服是儿女的生活，不是雇工换永生的工价。常存，是因为生命本于那位永存的子，不是因为意志力比世界更持久。</p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section id="heads" class="reveal">
+  <article class="card">
+    <div class="prose">
+      <h2 class="sec">先看全图，再走进句子</h2>
+      <p>讲章只有三个头，三头是一句话的三面：认清那秩序，认清那种爱，然后因基督的缘故拒绝它。</p>
+    </div>
+    <div class="map-wrap">
+      <svg viewBox="0 0 720 420" role="img" aria-label="三个要点的心智图">
+        <rect x="250" y="20" width="220" height="64" rx="14" fill="#0e1a2b"/>
+        <text x="360" y="60" text-anchor="middle" fill="#f6f1e6" font-size="22" font-family="Songti SC, Noto Serif SC, serif">不要爱世界</text>
+        <line x1="360" y1="84" x2="120" y2="150" stroke="#a6843e" stroke-width="2"/>
+        <line x1="360" y1="84" x2="360" y2="150" stroke="#a6843e" stroke-width="2"/>
+        <line x1="360" y1="84" x2="600" y2="150" stroke="#a6843e" stroke-width="2"/>
+        <rect x="24" y="150" width="200" height="88" rx="12" fill="#e7eef8" stroke="#1d3e6e"/>
+        <text x="124" y="186" text-anchor="middle" fill="#1d3e6e" font-size="20" font-family="Songti SC, Noto Serif SC, serif">什么是世界</text>
+        <text x="124" y="214" text-anchor="middle" fill="#24344a" font-size="14" font-family="Songti SC, Noto Serif SC, serif">正在过去的今世秩序</text>
+        <rect x="260" y="150" width="200" height="88" rx="12" fill="#f8e8e6" stroke="#8c2f39"/>
+        <text x="360" y="186" text-anchor="middle" fill="#8c2f39" font-size="20" font-family="Songti SC, Noto Serif SC, serif">什么是爱世界</text>
+        <text x="360" y="214" text-anchor="middle" fill="#3a2a2a" font-size="14" font-family="Songti SC, Noto Serif SC, serif">把倚靠交给三类欲望</text>
+        <rect x="496" y="150" width="200" height="88" rx="12" fill="#f8f0dc" stroke="#a6843e"/>
+        <text x="596" y="186" text-anchor="middle" fill="#6d5314" font-size="20" font-family="Songti SC, Noto Serif SC, serif">为何不要爱</text>
+        <text x="596" y="214" text-anchor="middle" fill="#2c2416" font-size="14" font-family="Songti SC, Noto Serif SC, serif">不是从父来，且要过去</text>
+        <g font-size="15" font-family="Songti SC, Noto Serif SC, serif" fill="#0e1a2b">
+          <text x="40" y="290">不是受造界本身</text>
+          <text x="40" y="318">卧在恶者手下（5:19）</text>
+          <text x="40" y="346">与肉身来的基督为敌的空气</text>
+          <text x="268" y="290">肉体的情欲</text>
+          <text x="268" y="318">眼目的情欲</text>
+          <text x="268" y="346">今生的骄傲</text>
+          <text x="508" y="290">爱父的心不能并存</text>
+          <text x="508" y="318">真光已照，黑暗在过去</text>
+          <text x="508" y="346">遵行旨意的永远常存</text>
+        </g>
+      </svg>
+    </div>
+    <p class="note">心智图：三头都从同一句证经长出，也要在逐句讲解里再合回去。</p>
+  </article>
+</section>
+
+<section id="exposition" class="reveal">
+  <article class="card prose">
+    <h2 class="sec">逐句：从词走到劝勉</h2>
+
+    <h3><span class="chip c-world">世界</span></h3>
+    <p>先把镜头拉远。创世记的世界是神说有就有的，是好的。镜头再推近到这封信：5:19的「全世界」卧在那恶者手下；2:15的「世界」与父对举，与「从父来的」对举，又被说成正在过去。所以此处的世界，是旧世代的秩序，是亚当叛逆被日常生活习惯之后的样子。</p>
+    <p>「世界上的事」不是房屋、麦子、婴孩的脸。16节自己解释了这些事像什么：三类欲望。世界在这里主要不是一张地图，而是一种爱的方向。第一点至此清楚：<span class="hl">世界是那正在过去、不从父来的秩序，不是创造主的作品本身。</span></p>
+
+    <h3><span class="chip c-love">爱</span></h3>
+    <p>圣经里的爱，不只是温热的感觉，更是归附、选择、以谁为可悦。申命记六章叫以色列尽心尽性爱耶和华。诗篇二十七篇把寻求收成一件事：一生一世住在殿中，瞻仰他的荣美。爱是专一的。主也说，一个人不能事奉两个主，不能又事奉神，又事奉玛门（太6:24）。</p>
+    <p>因此「不要爱」不是叫人冷漠，是叫人不可把这专一交给错的对象。和合本译作「爱父的心就不在他里面了」。原文这一语也可从「父对我们的爱」去听，学者有讨论；对会众，和合本的警告已经够清楚，而书信自己又说父先爱我们。两面在牧养上相遇：人若爱世界，就显出他并未活在那从父而来、又归向父的爱里。第二点的门在这里打开。</p>
+
+    <h3>肉体的情欲</h3>
+    <p>这不是说身体肮脏。道成了肉身，主自己有身体，复活也不是丢掉身体。肉体的情欲，是旧人那不顾神、只顾满足的冲动：肚子、床榻、安逸、不肯受管教的渴求，都可以成为主人。</p>
+    <p>创3:6「好作食物」，主在旷野被请去把石头变成饼，都是这一层。饼可以是恩典。饼若代替神口里所出的话，就成为世界的事。会众今日认得它：不是只在丑闻里，也在「只要舒服，不必顺服」的安静决定里。</p>
+
+    <h3>眼目的情欲</h3>
+    <p>眼目本为观看神的作为。堕落之后，眼目会把所见的当成必须占有的。创3:6「悦人的眼目」，主被试探时，世上万国的荣华被指给他看。看见本身不是罪；看见之后心里说「这该是我的神、我的分」，就是爱世界。</p>
+    <p>眼目的情欲很会扮成品味、事业与远见。它让人把邻舍看成比较的材料，把受造之美看成货架。韵诗第一篇的人不是闭眼，而是不走恶人的路，把喜乐放在耶和华的律法上，昼夜思想。</p>
+
+    <h3>今生的骄傲</h3>
+    <p>和合本这词所指的，是今生的自夸：以所有、地位、知识或属灵姿态为荣耀，好像生命是自己撑起来的。创3:5–6：果子「能使人有智慧」，蛇应许「便如神」。人要自己衡量善恶，就不必再听创造主。</p>
+    <p>教会里的版本更细：可以夸自己不像那些爱世界的人，这夸口仍是今生的骄傲。约翰不给这种夸口留座位。认识父的人，夸的是主名里的赦免（2:12），不是自己比世界干净的履历。</p>
+    <p>三类欲望合起来，就是第二点：<span class="mark-warn">爱世界，是把信靠从父挪开，安放在食欲式的满足、眼目的占有、以及今生的自夸上。这是毁约，是偶像。</span>海德堡问答所称的偶像，正是这种并列的倚靠，不必先有木偶。</p>
+
+    <h3>不是从父来的</h3>
+    <p>来源决定结局。不是从父来的，就不能用敬虔的话洗成圣洁。人可以把野心叫作异象，把嫉妒叫作负担，把安逸叫作成熟。约翰只问一句：它从父来，还是从世界来？</p>
+    <p>从父来的，在这信里有面貌：认肉身来的基督，守他的诫命，爱弟兄，罪得赦免，道存在心里。辨别不是靠情绪的强弱，是看来源。</p>
+
+    <h3>正在过去</h3>
+    <figure class="diagram">
+      <div class="pass-stage">
+        <div class="stage-card">
+          <svg viewBox="0 0 140 140" width="140" height="140" aria-hidden="true">
+            <circle class="ring" cx="70" cy="70" r="46"/>
+            <circle cx="70" cy="70" r="6" fill="#8c2f39" opacity=".35"/>
+          </svg>
+          <div>世界与情欲：正在过去</div>
+        </div>
+        <div class="stage-card">
+          <svg viewBox="0 0 140 140" width="140" height="140" aria-hidden="true">
+            <circle class="abide-mark" cx="70" cy="70" r="36"/>
+            <circle cx="70" cy="70" r="10" fill="#f4efe4"/>
+          </svg>
+          <div>遵行神旨意的：永远常存</div>
+        </div>
+      </div>
+      <figcaption>圆环会淡去，实心的记号留着。若系统要求减少动效，圆环就静止，对比仍在：一个是将尽的圈，一个是实在的印。</figcaption>
+    </figure>
+    <p>2:17的「过去」与2:8的「黑暗渐渐过去」是同一个黎明。不是说明天报纸会停，而是说这秩序的判决已经写下，它的吸引力在真光里正在失权。加拉太书一章四节说，基督照父的旨意为我们的罪舍己，要救我们脱离这罪恶的世代。罗马书十二章二节说，不要效法这个世界（那里的「世界」更近「这个世代」），只要心意更新而变化。雅各书四章四节说，与世俗为友就是与神为敌。用语不完全相同，核心相同：这个世代不是家乡。</p>
+    <p>既是正在过去，把它当成永远的神，就是把房屋建在退潮的沙上。今生的骄傲最怕这句话，因为它所有的分量都靠「还不会过去」来维持。</p>
+
+    <h3><span class="chip c-grace">遵行神旨意的永远常存</span></h3>
+    <p>和合本的重点落在人：遵行神旨意的那一位，永远常存。不是情欲的某一种refined版本忽然变得不朽。常存的生命，是与永活的主联合的生命。</p>
+    <p>这不是把永生改成工资。2:1的目的是「叫你们不犯罪」，同时又立刻指出中保。2:12已经宣告赦免。2:17的顺服，是赦免之后的道路，也是5:13那种「知道自己有永生」所能看见的记号。没有这记号，人只凭一句曾经决志的话来安慰自己，约翰不这样安慰人。有这记号，人也不可把记号当成可以夸口的功德，因为能力来自常存的道（2:14），来自住在主里面（2:6、2:27–28）。</p>
+    <p>第三点在此说完，并回到第一点：不要爱世界，<span class="mark-grace">因为它不是从父来的，它和它的情欲正在过去；惟有在子里遵行父旨意的，与将要显现的主一同常存。</span>三点不是三篇文章。世界是什么，决定了爱它是什么；爱它的本质是偶像，所以恩典必须是挽回祭而不是自我改良；正因为有这恩典，感恩才表现为不爱那正在过去的，并遵行那永远立定的旨意。</p>
+  </article>
+</section>
+
+<section id="parallels" class="reveal">
+  <article class="card prose">
+    <h2 class="sec">经文互参：同一个核心</h2>
+    <p>下列经文都真实存在。它们不是约翰的脚注，而是同一位神在历史里反复说的那一件事：心只能有一个主；受造物当感谢；叛逆的世代当离弃；常存的只有神自己的旨意与属他的人。</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>经文</th><th>共用的核心</th></tr></thead>
+        <tbody>
+          <tr><td>创3:6</td><td>好作食物、悦人眼目、能使人有智慧。三类拉力在伊甸园已经同框出现。爱世界不是都市病，是堕落的形状。</td></tr>
+          <tr><td>申6章</td><td>耶和华是独一的主，当尽心爱他，不可随从别神。约壹2:15是这诫命在末时的说法。</td></tr>
+          <tr><td>诗1篇</td><td>两条路。恶人之路必灭亡，喜爱耶和华律法的人如树。对应「过去」与「常存」，也对应今日韵诗第1篇。</td></tr>
+          <tr><td>诗27:4–6</td><td>一件事：住殿中瞻仰荣美，患难中被藏在帐幕里。对应韵诗27篇。爱若分散给世界，这一件事就不再是一件。</td></tr>
+          <tr><td>太4:1–11</td><td>主在肉身里受试探，拒绝饼代替神的话、拒绝试探主、拒绝以万国为拜的代价。他是胜了那恶者的那一位；2:13–14的少年人是靠他得胜，不是靠气质。</td></tr>
+          <tr><td>太6:24</td><td>不能事奉两个主，不能又事奉神又事奉玛门。爱世界在钱财上最不容易伪装。</td></tr>
+          <tr><td>约17章</td><td>门徒留在世界上，却不属世界。主求父保守他们脱离那恶者。与2:15同向：分别，而不是逃离受造界。</td></tr>
+          <tr><td>罗12:2</td><td>不要效法这个世代，心意要更新，才能察验神的旨意。与「遵行神旨意」相接。</td></tr>
+          <tr><td>加1:4</td><td>基督舍己，为要把我们从这罪恶的世代救出来。过去的世界，是基督已经动手拆的世界。</td></tr>
+          <tr><td>雅4:4</td><td>与世俗为友，就是与神为敌。用词严厉，因为圣约里的爱不能脚踏两条船。</td></tr>
+          <tr><td>约壹5:19</td><td>我们知道我们是属神的，全世界都卧在那恶者手下。2:15的「世界」在全书结尾得到名字：不是中性地图，是被恶者掌握的秩序。属神的人与这秩序必须分开。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-wrap" style="margin-top:1rem">
+      <table>
+        <caption class="note" style="caption-side:bottom; text-align:left; padding-top:.4rem">下表是教会讲道里常见的对照，帮助记忆，不是说约翰在抄录创世记或马太福音的句子。</caption>
+        <thead><tr><th>创3:6</th><th>太4章的试探</th><th>约壹2:16</th></tr></thead>
+        <tbody>
+          <tr><td>好作食物</td><td>石头变食物</td><td>肉体的情欲</td></tr>
+          <tr><td>悦人的眼目</td><td>万国与荣华被指示</td><td>眼目的情欲</td></tr>
+          <tr><td>创3:5–6：可喜爱，能使人有智慧；便如神</td><td>自取显赫，以神为可用的工具</td><td>今生的骄傲</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+</section>
+
+<section id="questions" class="reveal">
+  <article class="card prose">
+    <h2 class="sec">讨论问题与解析</h2>
+    <p>小组不必求意见整齐。每一问都要走回同一条路：这是不是受造物本身？爱是否成了倚靠？来源是父还是世界？基督的挽回祭是否仍站在句子前面？</p>
+
+    <div class="q">
+      <div class="label">问题一</div>
+      <h3>「不要爱世界」是不是叫我们看轻婚姻、日用的饮食、手艺与山川？</h3>
+      <p>解析：不是。创造时神看为好；提前4:4禁止把神所造的当作可弃。约翰限制的是「世界上的事」，并由16节定义成三类不从父来的欲望。婚姻若成为夸口或情欲的祭坛，就被爱错了；婚姻若在感谢与信实里领受，仍是造物主的礼物。判断标准不是物体的名单，而是心以谁为主。回到第一点：世界在此处是秩序，不是物质。</p>
+    </div>
+    <div class="q">
+      <div class="label">问题二</div>
+      <h3>约3:16与约壹2:15是否冲突？</h3>
+      <p>解析：不冲突。主语不同，词义也不同。3:16是神爱他所要拯救的人间，方法是赐下独生子。2:15是禁止门徒爱与父为敌的秩序。神爱世人，不表示神爱罪、爱黑暗、爱今生的骄傲。门徒学父，就爱邻舍与弟兄，却不与世俗为友（雅4:4）。把两节读成一句，会众才不会要么恨人，要么与神为敌还自称宽广。</p>
+    </div>
+    <div class="q">
+      <div class="label">问题三</div>
+      <h3>三类欲望与创3:6、与主的受试探，有什么共同之处？</h3>
+      <p>解析：共同之处是：受造的好处被用来替换神的话。食物、眼见的荣美、智慧或地位，本来都可以在神面前站立。蛇与试探者把它们变成「不必听神也能像神」。主在旷野每一步都把神的话放回原位，所以他能胜那恶者。教会的得胜是联于他（2:13–14），不是研究出一种更高级的禁欲。对照表是帮助，不要讲成约翰在写注释书。</p>
+    </div>
+    <div class="q">
+      <div class="label">问题四</div>
+      <h3>「爱父的心就不在他里面」是否说：一次羡慕世界，就失去了救恩？</h3>
+      <p>解析：约翰写的是一种爱，一种以世界为家、为神的归附，不是一次被广告刺中的软弱。2:1已经预备了犯罪时的中保。真儿女会跌倒，也会到中保那里，而不是把跌倒解释成自由。但这也不是安慰假冒的话。人若持续爱世界，毫无争战，也不回到父那里，就当照5:13的目的严肃地问：我是否真知道自己有永生？记号不是完美，是方向：有没有遵行神旨意的生命在长出来。</p>
+    </div>
+    <div class="q">
+      <div class="label">问题五</div>
+      <h3>2:19那些出去的人，和爱世界有什么关系？</h3>
+      <p>解析：他们离开使徒所传的相交，显明不属于这相交。这封信把教义与生活绑在一起：不认肉身来的基督，轻看罪，恨弟兄，爱世界，可以是同一股灵的不同脸。人不一定四样齐备才危险。牧者要温柔地找羊，也要诚实地说：出去并不能证明自己更高，只能证明不属于。对留下的人，警告是「你们要住在主里面」（2:28），不是「你们可以夸自己没走」。</p>
+    </div>
+    <div class="q">
+      <div class="label">问题六</div>
+      <h3>「遵行神旨意」是赚取永远常存，还是永生之人的记号？</h3>
+      <p>解析：是记号，也是道路，不是工价。顺序在经文里不能反：先有中保与挽回祭（2:1–2），先有主名里的赦免（2:12），先有父的爱（4:10、19），然后才是遵守与常存。比利时信条第二十一条把补赎放在基督一次的献上，不放在我们的改进上。海德堡问答第一问的安慰是「我属于基督」，不是「我比世界更有毅力」。人若用顺服去买永生，今生的骄傲只是换了宗教服装。人若因属于基督而顺服，2:17就是应许。</p>
+    </div>
+    <div class="q">
+      <div class="label">问题七</div>
+      <h3>少年人已经胜了那恶者，为什么紧接着还要听「不要爱世界」？</h3>
+      <p>解析：因为得胜不是毕业。恶者可以被胜，世界的情欲仍会以更体面的方式回来。5:19说全世界卧在那恶者手下，所以爱世界就是把已经夺回的心又送回去。2:14说他们刚强，是因为神的道常存在心里，不是因为血气正旺。对青年，讲台不该只说「外面的试探很可怕」，也要说「里面的道已经足够」。对年长者，父老「认识那从起初原有的」，同样不可在安静的骄傲里爱世界。</p>
+    </div>
+    <div class="q">
+      <div class="label">问题八</div>
+      <h3>今日会众最容易忽略的「今生的骄傲」是什么？</h3>
+      <p>解析：往往不是公开的奢华，而是属灵的比较、对子女前程的偶像、以及对「被人看见」的饥渴。这些都能坐在主日椅子上。解析时要回到来源：它若不是从父来的，就会过去；把它当永恒，爱父的心就被挤住。然后必须回到恩典，否则小组会变成互相指责。中保仍在父那里。认罪之后的感恩，是把那一件事要回来：像诗篇二十七篇，求住在他殿中，瞻仰他的荣美。</p>
+    </div>
+  </article>
+</section>
+
+<section id="expansions" class="reveal">
+  <article class="card prose">
+    <h2 class="sec">仍连在这段经文上的延伸</h2>
+    <h3>远避偶像</h3>
+    <p>约壹5:21「小子们哪，你们要自守，远避偶像」不是附言。全书从生命之道、相交、光与暗、爱与恨、敌基督、到信心与见证，最后落在这一句。2:15是它的中段。海德堡问答第九十四、九十五问用第一条诫命教导人：逃避偶像，并且知道偶像就是在真神之外另有倚靠。讲完三类欲望，可以用这一问作结束祷告的方向，而不必另起一个系列。</p>
+    <h3>在世界，不属世界</h3>
+    <p>约17章禁止两种偷懒。一种是离开人群才觉得圣洁，主没有这样求。一种是留下之后与世界认同，主说门徒不属世界，所以世界恨他们。2:15把恨的原因说成爱的方向：你若爱它所爱的，它就不恨你，父的爱也不在你里面安家。职场、亲属与邻里仍是爱弟兄、爱邻舍的地方，只是不再是供应身份的神。</p>
+    <h3>两首韵诗为什么配得上这段</h3>
+    <p>韵诗27篇4–6节把寻求收成一件事，并在患难中藏于帐幕。这是否定眼目的情欲与今生骄傲的正路：荣美在耶和华那里，不在万国的展示里。韵诗第1篇把路分成常存与灭亡。唱的时候，会众是在用诗篇同意2:17，不是在证道之后换一个话题。</p>
+    <h3>同一个黎明</h3>
+    <p>2:8「黑暗渐渐过去，真光已经照耀」与2:17「都要过去」应当连读。真光就是肉身来的基督，不是一种情绪。敌基督的灵不认这光（2:22，4:2–3）。所以不要爱世界，最终是不要爱一个没有肉身基督、也不需要挽回祭的宗教。那种宗教很属灵，也很属世界，因为它让人继续作自己的主。</p>
+    <h3>安慰与诫命是一篇</h3>
+    <p>海德堡问答第一问：生与死唯一的安慰，是身体灵魂都属于救主。若安慰在此，今生的骄傲就失去神位，因为我非己有。问答第九十五问所说的偶像，正是与这「属于」争夺所有权的东西。罪是争夺，恩典是基督把我们买回归他，感恩是甘心不再把所有权交还世界。讲章走到这里，应当能从第一问走到2:17，再走回第一问，中间没有断。</p>
+  </article>
+</section>
+
+<section id="memorize" class="reveal">
+  <article class="memory">
+    <h2 class="sec" style="color:#f6f1e6">讲员速记</h2>
+    <p>三头各一句，句句都回到证经。最后一句是福音，不是第四点。</p>
+    <ol>
+      <li><strong>什么是世界。</strong>不是神所造的好东西本身，乃是亚当叛逆里、卧在恶者手下、正在过去的今世秩序。</li>
+      <li><strong>什么是爱世界。</strong>就是把信靠与爱慕从父挪到肉体的情欲、眼目的情欲和今生的骄傲上；这是毁约的偶像崇拜，爱父的心就不在里面。</li>
+      <li><strong>为什么不要爱世界。</strong>因为它不是从父来的，且与其上的情欲都要过去；住在子里、遵行神旨意的，才永远常存。</li>
+    </ol>
+    <p class="gospel-line">福音一句：世界要过去，基督不过去——那义者已为我们的罪作了挽回祭，父先爱了我们，感恩就是遵行他的旨意，并与他永远常存。</p>
+  </article>
+  <article class="card prose" style="margin-top:.9rem">
+    <h3>把一篇收回原处</h3>
+    <p>历史里的约翰，对小亚细亚、传统上以以弗所为中心的教会，在约略的第一世纪末写下这禁令，因为有人出去，因为有灵不认肉身来的基督，因为有人把罪说轻，也因为胜利了的少年仍可能重爱世界。他写，是为相交与喜乐，为叫人不犯罪，为叫信的人知道自己有永生。</p>
+    <p>全本圣经从好的创造走到堕落，走到圣约，走到被掳，走到肉身来的真光，走到这世界受审判而过去，走到来世的常存。圣约不许我们恨恶受造界，只不许我们回到亚当的旧秩序。约翰福音里神所爱的人间，与书信里人不可爱的秩序，用的是同一个词的不同层次，服事的是同一位父。罪是拜偶像，恩典是中保与挽回祭，感恩是遵行旨意而常存。</p>
+    <p>所以结束时不要换一个励志的题目。再读一次2:15–17。然后用2:1祷告：若有人犯罪，在父那里我们有一位中保。再用1:4祝福：将这些话写给你们，是要叫你们的喜乐充足。</p>
+  </article>
+</section>
+
+<section id="close" class="reveal">
+  <article class="card prose">
+    <h2 class="sec">祝祷</h2>
+    <p>父啊，世界和其上的情欲都要过去。求你使你的儿女不把心交给那正在过去的，却因你儿子对我们罪所作的挽回祭，喜乐地属于他。求你的道常存在我们心里，叫我们遵行你的旨意，并且永远常存。奉我主耶稣基督的名。阿们。</p>
+    <footer class="colophon">
+      <p>经文用词依一九一九年官话和合本，公有领域，引文从短。年代依传统与约数，不作精确年份。教理只称海德堡问答第一问、第九十四问、第九十五问，以及比利时信条第十四条、第二十一条，不另编号。地图为示意图。</p>
+    </footer>
+  </article>
+</section>
+
+</main>
+</div>
+<script>
+(function () {
+  var btn = document.getElementById("toc-toggle");
+  var scrim = document.getElementById("scrim");
+  var mq = window.matchMedia("(max-width: 960px)");
+  function isMobile() { return mq.matches; }
+  function sync() {
+    if (isMobile()) {
+      var open = document.body.classList.contains("toc-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      btn.textContent = open ? "关闭目录" : "目录";
+      scrim.hidden = !open;
+    } else {
+      document.body.classList.remove("toc-open");
+      scrim.hidden = true;
+      var collapsed = document.body.classList.contains("toc-collapsed");
+      btn.setAttribute("aria-expanded", collapsed ? "false" : "true");
+      btn.textContent = collapsed ? "显示目录" : "隐藏目录";
+    }
+  }
+  btn.addEventListener("click", function () {
+    if (isMobile()) document.body.classList.toggle("toc-open");
+    else document.body.classList.toggle("toc-collapsed");
+    sync();
+  });
+  scrim.addEventListener("click", function () {
+    document.body.classList.remove("toc-open");
+    sync();
+  });
+  document.querySelectorAll("#toc a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      if (isMobile()) {
+        document.body.classList.remove("toc-open");
+        sync();
+      }
+    });
+  });
+  if (mq.addEventListener) mq.addEventListener("change", sync);
+  else if (mq.addListener) mq.addListener(sync);
+  sync();
+})();
+</script>
+<!--
+核对：无横向溢出（版心与表格在容器内滚动，正文换行）；目录可隐藏，窄屏为抽屉；讲章三点（什么是世界、什么是爱世界、为什么不要爱世界）已写明；救赎历史、圣约、约翰文献、罪–恩典–感恩闭环已连成一篇。
+-->
+</body>
+</html>
